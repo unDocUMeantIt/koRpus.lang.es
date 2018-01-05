@@ -16,5 +16,5 @@ BugReports: https://github.com/unDocUMeantIt/koRpus.lang.es/issues
 Authors@R: c(person(given="Meik", family="Michalke", email="meik.michalke@hhu.de", role=c("aut", "cre")), person(given="Earl", family="Brown", email="ekbrown@ksu.edu",
                     role=c("ctb")))
 Version: 0.1-1
-Date: 2018-01-03
+Date: 2018-01-05
 RoxygenNote: 6.0.1
