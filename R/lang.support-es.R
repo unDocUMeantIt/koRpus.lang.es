@@ -1,4 +1,4 @@
-# Copyright 2010-2018 Meik Michalke <meik.michalke@hhu.de>
+# Copyright 2010-2019 Meik Michalke <meik.michalke@hhu.de>
 #
 # This file is part of the R package koRpus.lang.es.
 #
@@ -53,7 +53,7 @@ lang.support.es <- function(...) {
       lang="es",
       encoding="UTF-8",
       preset=function(TT.cmd, TT.bin, TT.lib, unix.OS){
-        TT.abbrev    <- file.path(TT.lib, "spanish-abbreviations")
+        TT.abbrev    <- file.path(TT.lib, "spanish-abbreviations-utf8")
         TT.lexicon   <- file.path(TT.lib, "spanish-mwls-utf8")
         TT.lookup    <- file.path(TT.cmd, "mwl-lookup.perl")
         if(isTRUE(unix.OS)){
@@ -68,7 +68,7 @@ lang.support.es <- function(...) {
               TT.lookup         = TT.lookup,
               TT.filter         = c(),
 
-              TT.tknz.opts      = paste("-a", TT.abbrev),
+              TT.tknz.opts      = c(),
               TT.lookup.command = paste(TT.lookup, "-f", TT.lexicon, "|"),
               TT.filter.command = c()
             )
@@ -85,7 +85,7 @@ lang.support.es <- function(...) {
               TT.lookup         = c(),
               TT.filter         = c(),
 
-              TT.tknz.opts      = paste("-a", TT.abbrev),
+              TT.tknz.opts      = c(),
               TT.lookup.command = c(),
               TT.filter.command = c()
             )
