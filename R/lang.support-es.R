@@ -83,8 +83,8 @@ lang.support.es <- function(...) {
               TT.tagger         = file.path(TT.bin, "tree-tagger.exe"),
               TT.abbrev         = TT.abbrev,
               TT.params         = TT.params,
-              TT.lexicon        = c(),
-              TT.lookup         = c(),
+              TT.lexicon        = TT.lexicon,
+              TT.lookup         = TT.lookup,
               TT.filter         = c(),
 
               TT.tknz.opts      = c(),
