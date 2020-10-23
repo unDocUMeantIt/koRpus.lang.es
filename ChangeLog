@@ -1,13 +1,15 @@
 ChangeLog for package koRpus.lang.es
 
-changes in version 0.1-2 (2019-05-21)
+changes in version 0.1-2 (2020-10-23)
 unreleased:
   - this release is under development
 fixed:
   - removed hard coded abbreviations from global TT.tknz.opts in preset,
     to enable checks for file names by koRpus
+  - added MWL lookup to windows parameters
   - package name in license header
 changed:
+  - renamed abbreviations and parameter files omitting the "-utf8" suffix
   - updated README.md
 added:
   - support optional arguments for koRpus::set.lang.support()

@@ -1,4 +1,4 @@
-# Copyright 2010-2019 Meik Michalke <meik.michalke@hhu.de>
+# Copyright 2010-2020 Meik Michalke <meik.michalke@hhu.de>
 #
 # This file is part of the R package koRpus.lang.es.
 #
@@ -53,17 +53,19 @@ lang.support.es <- function(...) {
       lang="es",
       encoding="UTF-8",
       preset=function(TT.cmd, TT.bin, TT.lib, unix.OS){
-        TT.abbrev    <- file.path(TT.lib, "spanish-abbreviations-utf8")
-        TT.lexicon   <- file.path(TT.lib, "spanish-mwls-utf8")
+        TT.tokenizer <- file.path(TT.cmd, "utf8-tokenize.perl")
+        TT.abbrev    <- file.path(TT.lib, "spanish-abbreviations")
+        TT.params    <- file.path(TT.lib, "spanish.par")
+        TT.lexicon   <- file.path(TT.lib, "spanish-mwls")
         TT.lookup    <- file.path(TT.cmd, "mwl-lookup.perl")
         if(isTRUE(unix.OS)){
           # preset for unix systems
           return(
             list(
-              TT.tokenizer      = file.path(TT.cmd, "utf8-tokenize.perl"),
+              TT.tokenizer      = TT.tokenizer,
               TT.tagger         = file.path(TT.bin, "tree-tagger"),
               TT.abbrev         = TT.abbrev,
-              TT.params         = file.path(TT.lib, "spanish-utf8.par"),
+              TT.params         = TT.params,
               TT.lexicon        = TT.lexicon,
               TT.lookup         = TT.lookup,
               TT.filter         = c(),
@@ -77,16 +79,16 @@ lang.support.es <- function(...) {
           # preset for windows systems
           return(
             list(
-              TT.tokenizer      = file.path(TT.cmd, "utf8-tokenize.perl"),
+              TT.tokenizer      = TT.tokenizer,
               TT.tagger         = file.path(TT.bin, "tree-tagger.exe"),
               TT.abbrev         = TT.abbrev,
-              TT.params         = file.path(TT.lib, "spanish-utf8.par"),
+              TT.params         = TT.params,
               TT.lexicon        = c(),
               TT.lookup         = c(),
               TT.filter         = c(),
 
               TT.tknz.opts      = c(),
-              TT.lookup.command = c(),
+              TT.lookup.command = paste("perl", TT.lookup, "-f", TT.lexicon, "|"),
               TT.filter.command = c()
             )
           )
