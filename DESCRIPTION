@@ -1,19 +1,20 @@
 Package: koRpus.lang.es
 Type: Package
 Title: Language Support for 'koRpus' Package: Spanish
-Author: Meik Michalke <meik.michalke@hhu.de> [aut, cre], Earl Brown <ekbrown@ksu.edu> [ctb]
+Author: Meik Michalke [aut, cre], Earl Brown [ctb]
 Maintainer: Meik Michalke <meik.michalke@hhu.de>
 Depends: R (>= 3.1),koRpus (>= 0.11-2)
-Imports: methods,sylly.es
+Imports: sylly.es
 Additional_repositories: https://undocumeantit.github.io/repos/l10n
-Description: Adds support for the Spanish language to the 'koRpus' package. To ask for help, report bugs, suggest feature improvements, or discuss the global development of the package, please consider subscribing to the
-                         koRpus-dev mailing list (<http://korpusml.reaktanz.de>).
+Description: Adds support for the Spanish language to the 'koRpus' package. To ask for help, report bugs, suggest feature improvements, or discuss the global development of the
+                    package, please consider subscribing to the koRpus-dev mailing list (<https://korpusml.reaktanz.de>).
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyLoad: yes
 URL: https://reaktanz.de/?c=hacking&s=koRpus
 BugReports: https://github.com/unDocUMeantIt/koRpus.lang.es/issues
-Authors@R: c(person(given="Meik", family="Michalke", email="meik.michalke@hhu.de", role=c("aut", "cre")), person(given="Earl", family="Brown", email="ekbrown@ksu.edu", role=c("ctb")))
+Authors@R: c(person(given="Meik", family="Michalke", email="meik.michalke@hhu.de", role=c("aut", "cre")), person(given="Earl", family="Brown", email="ekbrown@ksu.edu",
+                    role=c("ctb")))
 Version: 0.1-2
-Date: 2018-02-21
-RoxygenNote: 6.0.1
+Date: 2020-10-24
+RoxygenNote: 7.1.1

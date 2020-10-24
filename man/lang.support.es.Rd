@@ -12,7 +12,7 @@ lang.support.es(...)
 \description{
 This function adds support for Spanish to the koRpus package. You should not
 need to call it manually, as that is done automatically when this package is
-loaded.
+being loaded.
 }
 \details{
 In particular, this function adds the following:
@@ -24,13 +24,10 @@ In particular, this function adds the following:
       implemented using the documentation for the corresponding
    TreeTagger parameter set[2]
 }
-
-To also be able to use hyphenation, the package sylly.es needs to exist and be loaded.
+Hyphenation patterns are provided by means of the \code{\link[sylly.es:hyph.support.es]{sylly.es}} package.
 }
 \examples{
-\dontrun{
 lang.support.es()
-}
 }
 \references{
 [1] \url{http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/}
